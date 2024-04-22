@@ -35,7 +35,7 @@ class Queue:
 
     def peek(self):
         if self.is_empty():
-            raise Exception("Queue is empty, hence can't do dequeue operation")
+            raise Exception("Queue is empty, hence can't do peek operation")
         else:
             return self.head.data
 

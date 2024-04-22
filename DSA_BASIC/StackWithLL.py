@@ -32,7 +32,10 @@ class Stack:
             self.size = self.size - 1
 
     def peek(self):
-        return self.head.data
+        if self.is_empty():
+            raise Exception("Stack is empty, hence can't do pop operation")
+        else:
+            return self.head.data
 
     def __len__(self):
         return self.size

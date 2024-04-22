@@ -34,7 +34,10 @@ class Queue:
             self.size = self.size - 1
 
     def peek(self):
-        return self.head.data
+        if self.is_empty():
+            raise Exception("Queue is empty, hence can't do dequeue operation")
+        else:
+            return self.head.data
 
     def size(self):
         return self.size

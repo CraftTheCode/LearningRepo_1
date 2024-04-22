@@ -18,15 +18,18 @@ class Stack:
             self.stack.pop(0)
 
     def peek(self):
-        return self.stack[0]
+        if self.is_empty():
+            raise Exception("Stack is empty, hence can't do peek operation")
+        else:
+            return self.stack[0]
 
     def __len__(self):
         return len(self.stack)
 
     def __str__(self):
         retVal = ''
-        for i in self.stack:
-            retVal = retVal + str(i) + '->'
+        for ele in self.stack:
+            retVal = retVal + str(ele) + '->'
 
         retVal = retVal + 'NULL'
         return retVal
